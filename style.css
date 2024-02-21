@@ -1,0 +1,115 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+body {
+    height: 100%;
+    background: #495E57;
+}
+
+.container {
+    background: #fff;
+    width: 400px;
+    padding: 35px;
+    margin: 100px auto;
+    border-radius: 10px;
+    box-shadow: 15px 30px 35px rgba(0,0,0,0.1);
+    border: 2px solid black;
+}
+
+.title {
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.coin {
+    height: 150px;
+    width: 150px;
+    position: relative;
+    margin: 32px auto;
+    transform-style: preserve-3d;
+}
+
+.coin img {
+    width: 100%;
+}
+
+.heads, .tails {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.tails {
+    transform: rotateX(180deg);
+}
+
+@keyframes spin-tails {
+    0%{
+        transform: rotateX(0);
+    }
+
+    100%{
+        transform: rotateX(1980deg);
+    }
+}
+
+@keyframes spin-heads {
+    0%{
+        transform: rotateX(0);
+    }
+
+    100%{
+        transform: rotateX(2160deg);
+    }
+}
+
+.stats {
+    display: flex;
+    color: black;
+    font-weight: 500;
+    padding: 20px;
+    margin-top: 55px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #495E57;
+}
+
+.stats p:nth-last-child(1) {
+    margin-left: 50%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    width: 150px;
+    padding: 15px 0;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#flip-button {
+    background: #3c4b46;
+    color: #fff;
+}
+
+#flip-button:disabled {
+    background: #e1e0ee;
+    border-color: #e1e0ee;
+    color: black;
+}
+
+#reset-button {
+    background: #674706;
+    color: #fff;
+}
